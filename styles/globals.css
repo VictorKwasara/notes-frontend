@@ -1,0 +1,33 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+body{
+ background: url("../public/notesL.png"), linear-gradient(to top, #00c9ee, #04c7ea, #07c4e6, #0bc2e3, #0ebfdf);
+ min-height: 100vh;
+ width: 100vw ;
+ background-size: contain;
+ background-repeat:no-repeat;
+}
+
+/* a {
+  color: inherit;
+  text-decoration: none;
+} */
+
+/* * {
+  box-sizing: border-box;
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+} */
