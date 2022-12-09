@@ -19,7 +19,7 @@ const MakeNate = () => {
 			} else {
 				router.push('/');
 			}
-		}, [publicKey]);
+		}, [publicKey, connection]);
  
 	const NOTE_PROGRAM_ID = 'HQA3KzCNbYTshuR2ej2dsZzeDXeVtUU6vy5NPPqBuyUF';
 	// const NOTE_PROGRAM_ID = '8GoaPx2quN5vwBqvELrkV8pCtPJm6dBdhSGmRYexZf9X';

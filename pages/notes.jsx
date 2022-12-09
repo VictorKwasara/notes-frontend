@@ -25,52 +25,48 @@ const Notes = () => {
 	]);
 
 	useEffect(() => {
-			if(connected) {
-			} else {
-				router.push('/');
-			}
-		}, []);
+		if (connected) {
+			getData()
+		} else {
+			router.push('/');
+		}
+	}, [connection]);
   
 
-    useEffect(()=>{
-
-      if (!publicKey || !connection) {
+  const getData = () => {
+			if (!publicKey || !connection) {
 				alert('Please connect your wallet!');
 				return;
 			}
 
-      // const [notesAccount] = Web3.PublicKey.findProgramAddressSync(
+			// const [notesAccount] = Web3.PublicKey.findProgramAddressSync(
 			// 	[publicKey.toBuffer(), new TextEncoder().encode('Notes Account')],
 			// 	new Web3.PublicKey(NOTE_PROGRAM_ID)
 			// );
 
-      connection
+			connection
 				.getProgramAccounts(new Web3.PublicKey(NOTE_PROGRAM_ID))
 				.then(async (accounts) => {
-					    const Notes = accounts.reduce((accum, {publickey, account}) => {					
+					const Notes = accounts.reduce((accum, { publickey, account }) => {
+						if (!account.data) {
+							return accum;
+						}
+						const Note = bufferSchema.decode(account.data);
 
-								if (!account.data) {
-									return accum;
-								}
-							  const Note = bufferSchema.decode(account.data)
+						if (!Note) {
+							return accum;
+						}
+						console.log(Note);
+						if (Note.owner.toString() != publicKey.toString()) {
+							return accum;
+						}
 
-								if (!Note){
-									return accum;
-								}	
-								console.log(Note);
-								if (Note.owner.toString() != publicKey.toString()) {
-									return accum;
-								}
+						return [...accum, Note];
+					}, []);
 
-							  return [...accum,Note]
-					  }, [])
-
-					  setData(Notes)
-									
+					setData(Notes);
 				});
-
-
-    },[publicKey])
+		};
 
   return (
      <>
