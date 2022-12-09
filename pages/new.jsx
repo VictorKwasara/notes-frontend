@@ -70,9 +70,9 @@ const MakeNate = () => {
 		//create instruction data
 		const buffer = Buffer.alloc(1000)
 		 const date = new Date() ;
-		 const [day,month, year] = [date.getDay(), date.getMonth(), date.getFullYear()]
+		 const [day,month, year] = [date.getDate(), date.getMonth(), date.getFullYear()]
 
-		noteSchema.encode({variant: 0, date:`${day}/${month}/${year}`, ...note},buffer)
+		noteSchema.encode({variant: 0, date:`${day}/${month + 1}/${year}`, ...note},buffer)
 		// create instruction
 
 		const InstructionBuffer = buffer.subarray(0, noteSchema.getSpan(buffer));
