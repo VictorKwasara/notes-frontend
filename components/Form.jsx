@@ -24,7 +24,7 @@ const Form = ({handlesubmit, note, setNote}) => {
 						placeholder='Whats on your mind...?'
 						value={note.note}
 						onChange={(e) => setNote({ ...note, note: e.target.value })}
-						rows={25}
+						rows={15}
 						type='text'
 						name='title'
 					/>

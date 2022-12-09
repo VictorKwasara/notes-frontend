@@ -29,7 +29,7 @@ const Notes = () => {
 			} else {
 				router.push('/');
 			}
-		}, [publicKey]);
+		}, []);
   
 
     useEffect(()=>{
@@ -71,6 +71,7 @@ const Notes = () => {
 
 
     },[publicKey])
+
   return (
      <>
 		 		{data.map((note, i)=> (					  

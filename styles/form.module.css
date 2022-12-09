@@ -14,6 +14,7 @@
   padding: 5px 15px; 
   background-image: linear-gradient(to bottom, #68e3f9, #60dff7, #57dcf4, #4ed8f2, #43d5f0);
   border: 2px solid #24abc3 ;
+  font-size: 20px ;
 }
 
 .input:focus {
