@@ -1,9 +1,14 @@
+*{
+  overflow-x: hidden ;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  width: 100vw ;
 }
 body{
  background: url("../public/notesL.png"), linear-gradient(to top, #00c9ee, #04c7ea, #07c4e6, #0bc2e3, #0ebfdf);
@@ -11,6 +16,18 @@ body{
  width: 100vw ;
  background-size: contain;
  background-repeat:no-repeat;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: #070709;        /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #F34213;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #070709;  /* creates padding around scroll thumb */
 }
 
 /* a {

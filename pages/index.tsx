@@ -29,6 +29,7 @@ export default function Home() {
       router.push("/notes")
     }else{
       setConnected(false)
+			router.push("/")
     }
   },[wallet])
 

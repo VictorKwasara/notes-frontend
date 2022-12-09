@@ -1,0 +1,20 @@
+
+.container {
+  margin: 50px auto ;
+  width: 60% ;
+  text-align: right;
+  background-image: linear-gradient(to bottom, #171a2140, #15181e40, #13161b40, #11141933, #0e111633);
+  border-radius: 5px ;
+  border-top: 6px solid #F34213;
+  padding: 10px  ;
+  padding-right: 38px ;
+ 
+}
+
+
+.heading {
+  color: #070709 ;
+}
+
+/* #F34213  #331E36 #402E32 */
+

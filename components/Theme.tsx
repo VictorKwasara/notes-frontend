@@ -38,7 +38,7 @@ theme = responsiveFontSizes(theme);
 
 const Theme: FC<{children: ReactNode}> = ({children}) => {
   return (
-     <ThemeProvider theme={theme}><Container maxWidth="xl">{children}</Container></ThemeProvider>
+     <ThemeProvider theme={theme}><Container maxWidth="xl" sx={{"overflow-x":"hidden"}}>{children}</Container></ThemeProvider>
   )
 }
 
